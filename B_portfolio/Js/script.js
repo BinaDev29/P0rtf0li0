@@ -54,13 +54,6 @@ const nav = document.querySelector(".nav"),
 for (let i = 0; i < navList.length; i++) {
   const a = navList[i].querySelector("a");
   a.addEventListener("click", function () {
-    // ከዚህ በታች ያለው ኮድ የነበረውን የገጽ መደበቅ ተግባር ያጠፋዋል
-    // for (let j = 0; j < navList.length; j++) {
-    //   navList[j].querySelector("a").classList.remove("active");
-    //   const target = navList[j].querySelector("a").getAttribute("href").substring(1);
-    //   document.getElementById(target).classList.add("hidden");
-    // }
-
     for (let j = 0; j < navList.length; j++) {
         navList[j].querySelector("a").classList.remove("active");
     }
