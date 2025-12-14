@@ -16,7 +16,7 @@ body.dark {
 }
 
 html {
-  scroll-behavior: smooth; /* ገጹ ቀስ ብሎ እንዲንሸራሸር ያደርጋል */
+  scroll-behavior: smooth;
 }
 
 * {
@@ -47,11 +47,6 @@ ul {
   display: block;
   padding: 0 30px;
 }
-
-/* ይህን ኮድ እንተወዋለን ምክንያቱም ገጾች በአንድ ጊዜ እንዲታዩ ስለፈለግክ */
-/* .hidden {
-  display: none !important;
-} */
 
 .mainContent {
   padding-left: 270px;
@@ -713,7 +708,6 @@ h3.my-profession {
   font-weight: 400;
 }
 
-/* የተስተካከለው የ .row ኮድ */
 .contact .row {
   justify-content: center;
 }
