@@ -5,6 +5,8 @@
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
   --skin-color: #ec1839;
+  --font-family-sans-serif: 'Roboto', sans-serif;
+  --font-family-serif: 'Poppins', serif;
 }
 
 body.dark {
@@ -30,6 +32,7 @@ html {
 body {
   line-height: 1.5;
   font-size: 16px;
+  font-family: var(--font-family-sans-serif);
 }
 
 ::before,
@@ -843,6 +846,20 @@ h3.my-profession {
 
 .style-switcher .color-5 {
   background: #e61c7a;
+}
+
+/* Animations */
+.section {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive */

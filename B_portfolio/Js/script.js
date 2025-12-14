@@ -47,39 +47,13 @@ window.addEventListener("load", () => {
   }
 });
 
-/*============= Navigation Logic to make pages work =============*/
-const nav = document.querySelector(".nav"),
-  navList = nav.querySelectorAll("li");
+/*============= Navigation Logic for smooth scrolling =============*/
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-for (let i = 0; i < navList.length; i++) {
-  const a = navList[i].querySelector("a");
-  a.addEventListener("click", function () {
-    for (let j = 0; j < navList.length; j++) {
-        navList[j].querySelector("a").classList.remove("active");
-    }
-    this.classList.add("active");
-
-    const targetId = this.getAttribute("href").substring(1);
-    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-  });
-}
-
-// Handle "More About Me" button
-const moreAboutMeBtn = document.querySelector(".about-content .btn");
-if (moreAboutMeBtn) {
-  moreAboutMeBtn.addEventListener("click", function (event) {
-    event.preventDefault();
-    const targetId = this.getAttribute("href").substring(1);
-    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-    
-    // Also update the navigation link to be active
-    const navLink = document.querySelector(`.nav a[href="#${targetId}"]`);
-    if (navLink) {
-        // Remove active class from all other nav links
-        for (let j = 0; j < navList.length; j++) {
-            navList[j].querySelector("a").classList.remove("active");
-        }
-        navLink.classList.add("active");
-    }
-  });
-}
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
